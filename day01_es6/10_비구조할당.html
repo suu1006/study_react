@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const dog = {
+            name : '멍멍이',
+            age : 2
+        }
+        console.log(dog.name , dog.age);
+        console.log(dog['name'], dog['age']) // 위의 결과와 같음
+        
+        const {name, age} = dog
+        console.log(name, age) // 비구조할당 방식
+
+        const data = {
+            name2 : '홍길동', age2 : 20, kor : 100, eng : 85, math : 90
+        }
+        console.log(data.name2, data.age2, data.kor, data.eng, data.math)
+
+        const {name2, age2, kor, eng, math} = data // 비구조 할당 방식(많이 사용한다!)
+        console.log(name2, age2, kor, eng, math)
+    </script>
+</body>
+</html>
+
+<!-- 비구조 할당(구조분해) = 하나하나 낱개로 받는 것
+예 ) const object = {a:1 , b:2, c:3}
+    const {a, b, c}  = object
+-->
